@@ -19,7 +19,9 @@ public class ProgramExtends {
 		
 		// DOWNCASTING
 		BusinessAccount bac4 = (BusinessAccount) acc2;
-		BusinessAccount bac5 = (BusinessAccount) acc3;
+		//BusinessAccount bac5 = (BusinessAccount) acc3; //SavingsAccount não é uma BusinessAccount, ela é uma Account
+		
+		
 	}
 
 }

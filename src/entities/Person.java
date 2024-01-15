@@ -1,15 +1,23 @@
 package entities;
 
-public class Person {
+public abstract class Person {
 	String name;
 	int age;
 	double height;
+	protected Double annualIncome;
 	
 	public Person(String name, int age, double heigh) {
 		this.name = name;
 		this.age = age;
 		this.height = heigh;
 	}
+	
+	public Person(String name, Double annualIncome) {
+		this.name = name;
+		this.annualIncome = annualIncome;
+	}
+	
+	public abstract Double taxes();
 	
 	public String getName() {
 		return name;

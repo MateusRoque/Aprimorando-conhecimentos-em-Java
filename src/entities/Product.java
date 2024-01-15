@@ -1,9 +1,11 @@
 package entities;
 
 public class Product {
-	private String name;
-	private double price;
+	protected String name;
+	protected double price;
 	private int quantity;
+	
+	public Product() {}
 	
 	public Product(String name, double price, int quantity) {
 		this.name = name;
@@ -16,6 +18,9 @@ public class Product {
 		this.price = price;
 	}
 	
+	public String priceTag() {
+		return name + " $ " + price;
+	}
 	public String getName() {
 		return name;
 	}
