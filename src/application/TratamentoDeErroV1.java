@@ -6,26 +6,25 @@ import java.util.Date;
 import java.util.Scanner;
 
 import model.entities.Reservation;
+import model.exceptions.DomainExeception;
 
 public class TratamentoDeErroV1 {
 	
-	public static void main(String[] args) throws ParseException {
+	public static void main(String[] args){
 		
 		Scanner sc = new Scanner(System.in);
 		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 		
-		System.out.print("Room number:");
-		int number = sc.nextInt();
-		
-		System.out.print("Check-in date (dd/MM/yyyy): ");
-		Date checkIn = sdf.parse(sc.next());
-				
-		System.out.print("Check-out date (dd/MM/yyyy): ");
-		Date checkOut = sdf.parse(sc.next());
-				
-		if(!checkOut.after(checkIn)) {
-			System.out.println("Erro! A data de check-out deve estar depois da data de check-in");
-		} else {
+		try {
+			System.out.print("Room number:");
+			int number = sc.nextInt();
+			
+			System.out.print("Check-in date (dd/MM/yyyy): ");
+			Date checkIn = sdf.parse(sc.next());
+					
+			System.out.print("Check-out date (dd/MM/yyyy): ");
+			Date checkOut = sdf.parse(sc.next());
+					
 			Reservation rs = new Reservation(number, checkIn, checkOut);
 			System.out.println(rs.toString());
 			
@@ -38,8 +37,12 @@ public class TratamentoDeErroV1 {
 			
 			rs.updateDates(checkIn, checkOut);
 			System.out.println(rs.toString());
+			
+		} catch (ParseException pe) {
+			System.out.println("Data inválida! ");
+		} catch (DomainExeception e) {
+			System.out.println("Erro na reserva: " + e.getMessage());
 		}
-		
 		sc.close();
 	}
 }

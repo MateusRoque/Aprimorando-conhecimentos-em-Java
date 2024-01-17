@@ -1,16 +1,20 @@
 package model.entities;
 
+import model.exceptions.AccountException;
+
 public class Account {
 	private Integer number;
 	private String holder;
 	protected Double balance;
+	protected Double withDrawLimit; 
 	
 	public Account() {}
 
-	public Account(Integer number, String holder, Double balance) {
+	public Account(Integer number, String holder, Double balance, Double withDrawLimit) {
 		this.number = number;
 		this.holder = holder;
 		this.balance = balance;
+		this.withDrawLimit = withDrawLimit;
 	}
 
 	public Integer getNumber() {
@@ -36,7 +40,12 @@ public class Account {
 	public void deposit(double amount) {
 		balance += amount;
 	}
-	public void withdraw(double amount) {
+	public void withdraw(double amount) throws AccountException {
+		if(balance == 0.0) {
+			throw new AccountException("conta sem saldo.");
+		} else if (amount > withDrawLimit) {
+			throw new AccountException("valor de saque maior que o valor do limite.");
+		}
 		balance -= amount + 5.0;
 	}
 }
