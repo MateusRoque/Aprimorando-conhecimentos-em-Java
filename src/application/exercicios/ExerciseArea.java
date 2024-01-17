@@ -5,10 +5,10 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Scanner;
 
-import entities.Circle;
-import entities.Color;
-import entities.Rectangle;
-import entities.Shape;
+import model.entities.Circle;
+import model.entities.Color;
+import model.entities.Rectangle;
+import model.entities.Shape;
 
 public class ExerciseArea {
 	public static void main(String[] args) {

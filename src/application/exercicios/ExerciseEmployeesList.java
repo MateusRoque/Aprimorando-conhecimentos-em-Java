@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Locale;
 import java.util.Scanner;
 
-import entities.Employees;
+import model.entities.Employees;
 
 public class ExerciseEmployeesList {
 

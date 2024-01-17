@@ -3,7 +3,7 @@ package application.exercicios;
 import java.util.Locale;
 import java.util.Scanner;
 
-import entities.Person;
+import model.entities.Person;
 
 public class ExerciseVect {
 	// ALTURAS **********************************

@@ -4,8 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 import java.util.Scanner;
-import entities.Employees;
-import entities.OutSourcedEmployee;
+
+import model.entities.Employees;
+import model.entities.OutSourcedEmployee;
 
 public class ExerciseEmployee {
 

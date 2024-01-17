@@ -6,10 +6,10 @@ import java.text.SimpleDateFormat;
 import java.util.Locale;
 import java.util.Scanner;
 
-import entities.Department;
-import entities.HourContract;
-import entities.Worker;
 import entities.enums.WorkerLevel;
+import model.entities.Department;
+import model.entities.HourContract;
+import model.entities.Worker;
 
 public class ExerciseWorker {
 

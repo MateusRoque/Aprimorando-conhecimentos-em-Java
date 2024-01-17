@@ -3,7 +3,7 @@ package application.exercicios;
 import java.util.Locale;
 import java.util.Scanner;
 
-import entities.CurrencyConverter;
+import model.entities.CurrencyConverter;
 
 public class ExerciseDolar {
 	public static void main(String[] args) {

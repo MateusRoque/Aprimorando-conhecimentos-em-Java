@@ -2,7 +2,7 @@ package application;
 
 import java.util.Scanner;
 
-import entities.Triangle;
+import model.entities.Triangle;
 
 public class Main {
 

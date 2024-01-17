@@ -5,9 +5,9 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Scanner;
 
-import entities.Person;
-import entities.PhysicalPerson;
-import entities.legalPerson;
+import model.entities.Person;
+import model.entities.PhysicalPerson;
+import model.entities.legalPerson;
 
 public class ExerciseCompany {
 	public static void main(String[] args) {
